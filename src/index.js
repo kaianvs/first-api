@@ -40,17 +40,7 @@ const server = http.createServer((request, response)=>{
         response.writeHead(404, {  'Content-Type': 'text/html' });
         response.end(`Cannot ${request.method} ${parsedUrl.pathname}`);
     }
-
-    // if(request.url === '/users' && request.method === 'GET'){
-    //     UserController.listUsers(request, response);
-       
-
-    // }else{
-    //     response.writeHead(404, {  'Content-Type': 'text/html' });
-    //     response.end(`Cannot ${request.method} ${request.url}`);
-    // }
-
-    
+  
 });
 
 server.listen(3000, ()=>{
